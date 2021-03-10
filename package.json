@@ -37,7 +37,7 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "prettier": "npx prettier --write ./source/",
+    "prettier": "npx prettier --write ./source/index.html ./source/sass",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run prettier && npm run editorconfig && npm run stylelint && eslint source/js/",
     "build": "gulp build",
