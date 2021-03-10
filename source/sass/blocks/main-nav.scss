@@ -1,0 +1,25 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  width: 880px;
+  min-height: 317px;
+}
+
+.main-nav__header {
+  order: 1;
+  margin-top: auto;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__site-nav {
+  margin: 0 5px 15px 2px;
+  padding: {
+    left: 20px;
+    right: 20px;
+    bottom: 8px;
+  }
+  border-bottom: 1px solid rgba($basic-white, 0.2);
+}

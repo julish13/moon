@@ -1,0 +1,12 @@
+.site-nav {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-row-gap: 10px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.site-nav__item a {
+  display: block;
+  color: inherit;
+}

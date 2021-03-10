@@ -1,0 +1,32 @@
+$main-header-desktop-height: 825px;
+
+.main-header {
+  height: $main-header-desktop-height;
+  background-color: black;
+  background-image: url("../img/bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1440px $main-header-desktop-height;
+  color: $basic-white;
+}
+
+.main-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: {
+    right: auto;
+    left: auto;
+  }
+  width: 880px;
+}
+
+.main-header__promo {
+  width: 393px;
+  padding-top: 51px;
+}
+
+.main-header__feedback {
+  padding-top: 6px;
+  width: 327px;
+}

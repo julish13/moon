@@ -38,11 +38,31 @@
     <script src="./pixel-glass/script.js"></script>
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <nav class="main-nav">
+    <header class="page__header page-header container">
+      <nav class="page-header__main-nav main-nav">
         <div class="main-nav__header">
           <a class="main-nav__logo main-nav__logo--no-js logo">
-            <svg></svg>
+            <svg
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 68 21"
+              width="67.6px"
+              height="20.28px"
+            >
+              <path
+                d="M13.36 0v20.05h-3.29V5.82l-1.1 1.39-2.15 2.76-.09.1-.14-.1-2.15-2.76-1.1-1.43v14.27H0V0h3.34l3.39 4.3L10.07 0h3.3zM8.3 10.07l-.1-.1.1.1z"
+                fill="#0AD9C6"
+              />
+              <path
+                d="M8.45 9.97l-.1.1H8.3l.15-.1zM38.2 5.61l-9.12 6.7 2.12 2.88 9.12-6.7-2.11-2.88z"
+                fill="#0AD9C6"
+              />
+              <path
+                d="M26.67 3a7.04 7.04 0 100 14.09 7.04 7.04 0 000-14.09zm0 10.27a3.22 3.22 0 110-6.45 3.22 3.22 0 010 6.45zM43.64 3a7.04 7.04 0 107.04 7.04A7.1 7.1 0 0043.64 3zm0 10.27a3.22 3.22 0 110-6.45 3.22 3.22 0 010 6.45zM67.6.24v20.04h-3.34V9.88l-2.82-2.67-2.1-2.06v15.13H56V.24h3.34L63.25 4l1 .95V.24h3.35z"
+                fill="#0AD9C6"
+              />
+              <path fill="#0AD9C6" d="M37 3h6v4h-6z" />
+            </svg>
           </a>
           <button
             class="main-nav__toggle main-nav__toggle--no-js"
@@ -51,52 +71,54 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <div class="main-nav__site-nav main-nav__site-nav--no-js site-nav">
-          <ul class="site-nav__list">
-            <li class="site-nav__item">
-              <a href="#">О&nbsp;нас</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="#">Виды велосипедов</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="#">Видео про велосипеды</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="main-nav__site-nav site-nav">
+          <li class="site-nav__item">
+            <a href="#">О&nbsp;нас</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#">Виды велосипедов</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#">Видео про велосипеды</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
-      <header>
-        <section class="promo">
-          <h2>Мы&nbsp;продаем велосипеды</h2>
-          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
-        </section>
-        <section class="feedback">
-          <h2 class="visually-hidden">Обратная связь</h2>
-          <p>
-            Заполните поля ниже и&nbsp;мы&nbsp;подберем велосипед Вашей мечты
-          </p>
-          <form>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Введите Ваше Имя"
-            />
-            <input
-              type="tel"
-              name="tel"
-              id="tel"
-              placeholder="Введите Ваш номер телефона"
-            />
-            <button type="submit">Подобрать велосипед мечты</button>
-          </form>
-        </section>
+      <header class="main__header main-header container">
+        <div class="main-header__wrapper">
+          <section class="main-header__promo promo">
+            <h2>Мы&nbsp;продаем велосипеды</h2>
+            <p>
+              Наш магазин отбирает только самые лучшие велосипеды для продажи
+            </p>
+          </section>
+          <section class="main-header__feedback feedback">
+            <h2 class="visually-hidden">Обратная связь</h2>
+            <p>
+              Заполните поля ниже и&nbsp;мы&nbsp;подберем велосипед Вашей мечты
+            </p>
+            <form class="form-feedback">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Введите Ваше Имя"
+              />
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Введите Ваш номер телефона"
+              />
+              <button type="submit">Подобрать велосипед мечты</button>
+            </form>
+          </section>
+        </div>
       </header>
       <section class="about">
         <h2>Несколько фактов о&nbsp;нас</h2>

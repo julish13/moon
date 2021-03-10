@@ -1,0 +1,32 @@
+.form-feedback {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.form-feedback input {
+  padding: 14px 29px 8px;
+  border: 1px solid $input-border-color;
+  border-radius: 6px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+
+  &::placeholder {
+    color: rgba($placeholder-color, 0.5);
+  }
+}
+
+.form-feedback button {
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: $basic-turquoise;
+  color: $basic-black;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  word-break: break-word;
+}
+
