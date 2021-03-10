@@ -12,6 +12,30 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* Mobile layout by default */
+        background-image: url("./pixel-glass/images/mobile.png");
+      }
+      /* Tablet */
+      @media (min-width: 768px) {
+        HTML {
+          /* Tablet layout */
+          background-image: url("./pixel-glass/images/tablet.png");
+        }
+      }
+      /* Desktop */
+      @media (min-width: 1024px) {
+        HTML {
+          /* Desktop layout */
+          background-image: url("./pixel-glass/images/desktop.png");
+        }
+      }
+    </style>
+    <link href="./pixel-glass/styles.css" rel="stylesheet" />
+    <script src="./pixel-glass/script.js"></script>
   </head>
   <body class="page__body">
     <header class="page-header">

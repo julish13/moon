@@ -97,5 +97,14 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+const devTools = (done) => {
+  gulp
+    .src(["source/pixel-glass/**/*"], {
+      base: "source",
+    })
+    .pipe(gulp.dest("build"));
+  done();
+};
+
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", devTools));
 gulp.task("start", gulp.series("build", "server"));
