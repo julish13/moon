@@ -32,7 +32,8 @@
     "stylelint-config-htmlacademy": "0.1.x",
     "eslint": "4.16.0",
     "eslint-config-htmlacademy": "0.4.x",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "normalize-scss": "7.0.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
