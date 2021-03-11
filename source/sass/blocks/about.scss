@@ -9,12 +9,18 @@
   line-height: 30px;
   letter-spacing: -0.005em;
   text-align: center;
+
+  @media #{$max-tablet} {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 41px;
+  }
 }
 
 .about ol {
   display: grid;
   grid-template-columns: repeat(4, 263px);
-  grid-column-gap: 38px;
+  grid-gap: 38px;
   margin: 0 auto;
   padding-left: 0;
   width: min-content;
@@ -23,6 +29,13 @@
   line-height: 34px;
   text-align: center;
   letter-spacing: -0.005em;
+
+  @media #{$max-tablet} {
+    grid-template-columns: repeat(2, 263px);
+    grid-column-gap: 28px;
+    grid-row-gap: 44px;
+    letter-spacing: -0.01px;
+  }
 }
 
 .about li {

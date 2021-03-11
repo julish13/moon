@@ -1,7 +1,7 @@
 $main-header-desktop-height: 825px;
 
 .main-header {
-  height: $main-header-desktop-height;
+  min-height: $main-header-desktop-height;
   background-color: $black-1;
   background-image: url("../img/bg-desktop.jpg");
   background-repeat: no-repeat;
@@ -10,6 +10,7 @@ $main-header-desktop-height: 825px;
   color: $basic-white;
 
   @media #{$max-tablet} {
+    min-height: auto;
     background-color: inherit;
     background-image: none;
     color: $black-1;

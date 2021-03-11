@@ -8,4 +8,11 @@
 
 .main__about {
   padding-top: 150px;
+
+  @media #{$max-tablet} {
+    padding: {
+      top: 70px;
+      bottom: 48px;
+    }
+  }
 }
