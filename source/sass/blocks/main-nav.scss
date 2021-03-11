@@ -1,25 +1,135 @@
 .main-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
+  padding-top: 21px;
   width: 880px;
-  min-height: 317px;
+  min-height: 338px;
+
+  @media #{$max-tablet} {
+    display: block;
+    padding-top: 0;
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+.main-nav--opened,
+.main-nav--no-js {
+  @media #{$max-tablet} {
+    min-height: 100vh;
+    background-color: $basic-white;
+  }
+}
+
+.main-nav--no-js {
+  @media #{$max-tablet} {
+    position: static;
+    transform: none;
+    padding-bottom: 25px;
+    min-height: auto;
+  }
 }
 
 .main-nav__header {
   order: 1;
   margin-top: auto;
+
+  @media #{$max-tablet} {
+    display: flex;
+    align-items: flex-end;
+    padding-left: 21px;
+  }
+}
+
+.main-nav__logo {
+  @media #{$max-tablet} {
+    padding-bottom: 5px;
+  }
+}
+
+.main-nav__logo--opened,
+.main-nav__logo--no-js {
+  @media #{$max-tablet} {
+    display: none;
+  }
 }
 
 .main-nav__toggle {
   display: none;
+
+  @media #{$max-tablet} {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    border: none;
+    width: 50px;
+    height: 50px;
+  }
 }
 
-.main-nav__site-nav {
-  margin: 0 5px 15px 2px;
-  padding: {
-    left: 20px;
-    right: 20px;
-    bottom: 8px;
+.main-nav__toggle--closed {
+  @media #{$max-tablet} {
+    background-color: $basic-turquoise;
   }
-  border-bottom: 1px solid rgba($basic-white, 0.2);
+
+  &::before {
+    @media #{$max-tablet} {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 22px;
+      height: 1px;
+      background-color: $basic-black;
+      border-radius: 1px;
+      box-shadow: 0 6px 0 0 $basic-black, 0 -6px 0 0 $basic-black;
+    }
+  }
+}
+
+.main-nav__toggle--opened {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 2px;
+    width: 31px;
+    height: 1px;
+    background-color: rgba($grey-3, 0.2);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.main-nav__toggle--no-js {
+  @media #{$max-tablet} {
+    display: none;
+  }
+}
+
+.main-nav__site-nav--closed {
+  @media #{$max-tablet} {
+    display: none;
+  }
+}
+
+.main-nav__site-nav--opened,
+.main-nav__site-nav--no-js {
+  @media #{$max-tablet} {
+    display: block;
+  }
 }

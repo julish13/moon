@@ -2,12 +2,18 @@ $main-header-desktop-height: 825px;
 
 .main-header {
   height: $main-header-desktop-height;
-  background-color: black;
+  background-color: $basic-black;
   background-image: url("../img/bg-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1440px $main-header-desktop-height;
   color: $basic-white;
+
+  @media #{$max-tablet} {
+    background-color: inherit;
+    background-image: none;
+    color: $basic-black;
+  }
 }
 
 .main-header__wrapper {
@@ -19,14 +25,29 @@ $main-header-desktop-height: 825px;
     left: auto;
   }
   width: 880px;
+
+  @media #{$max-tablet} {
+    display: block;
+    width: auto;
+  }
 }
 
 .main-header__promo {
-  width: 393px;
   padding-top: 51px;
+
+  @media #{$max-tablet} {
+    padding-top: 135px;
+  }
 }
 
 .main-header__feedback {
   padding-top: 6px;
-  width: 327px;
+
+  @media #{$max-tablet} {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    padding-top: 70px;
+  }
 }

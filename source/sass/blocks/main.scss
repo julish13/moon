@@ -1,3 +1,7 @@
 .main__header {
   padding-top: 318px;
+
+  @media #{$max-tablet} {
+    padding-top: 0;
+  }
 }

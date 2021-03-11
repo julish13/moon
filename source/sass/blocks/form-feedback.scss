@@ -5,7 +5,7 @@
 
 .form-feedback input {
   padding: 14px 29px 8px;
-  border: 1px solid $input-border-color;
+  border: 1px solid $grey-4;
   border-radius: 6px;
   color: inherit;
   font-family: inherit;
@@ -13,8 +13,12 @@
   font-size: 15px;
   line-height: 24px;
 
+  @media #{$max-tablet} {
+    padding: 11px 21px;
+  }
+
   &::placeholder {
-    color: rgba($placeholder-color, 0.5);
+    color: rgba($grey-1, 0.5);
   }
 }
 
@@ -29,4 +33,3 @@
   line-height: 21px;
   word-break: break-word;
 }
-

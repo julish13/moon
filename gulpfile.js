@@ -8,6 +8,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var csso = require("gulp-csso");
+const concat = require("gulp-concat");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -85,7 +86,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source//*.ico"
     ], {
       base: "source"
@@ -97,6 +97,14 @@ gulp.task("clean", function () {
   return del("build");
 });
 
+
+gulp.task("scripts", function() {
+  return gulp
+  .src(["./source/js/**/*.js"])
+  .pipe(concat("main.js"))
+  .pipe(gulp.dest("./build/js"))
+})
+
 const devTools = (done) => {
   gulp
     .src(["source/pixel-glass/**/*"], {
@@ -106,5 +114,5 @@ const devTools = (done) => {
   done();
 };
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", devTools));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "scripts", devTools));
 gulp.task("start", gulp.series("build", "server"));

@@ -38,8 +38,8 @@
     <script src="./pixel-glass/script.js"></script>
   </head>
   <body class="page__body">
-    <header class="page__header page-header container">
-      <nav class="page-header__main-nav main-nav">
+    <header class="page__header page-header">
+      <nav class="page-header__main-nav main-nav main-nav--no-js">
         <div class="main-nav__header">
           <a class="main-nav__logo main-nav__logo--no-js logo">
             <svg
@@ -71,25 +71,27 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <ul class="main-nav__site-nav site-nav">
-          <li class="site-nav__item">
-            <a href="#">О&nbsp;нас</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="#">Виды велосипедов</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="#">Видео про велосипеды</a>
-          </li>
-          <li class="site-nav__item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
+        <div class="main-nav__site-nav main-nav__site-nav--no-js site-nav">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a href="#">О&nbsp;нас</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Виды велосипедов</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Видео про велосипеды</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="main">
       <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
-      <header class="main__header main-header container">
+      <header class="main__header main-header">
         <div class="main-header__wrapper">
           <section class="main-header__promo promo">
             <h2>Мы&nbsp;продаем велосипеды</h2>
@@ -99,16 +101,16 @@
           </section>
           <section class="main-header__feedback feedback">
             <h2 class="visually-hidden">Обратная связь</h2>
-            <p>
-              Заполните поля ниже и&nbsp;мы&nbsp;подберем велосипед Вашей мечты
-            </p>
+            <p>Заполните поля ниже и&nbsp;мы подберем велосипед Вашей мечты</p>
             <form class="form-feedback">
+              <label class="visually-hidden" for="name"></label>
               <input
                 type="text"
                 name="name"
                 id="name"
                 placeholder="Введите Ваше Имя"
               />
+              <label class="visually-hidden" for="tel"></label>
               <input
                 type="tel"
                 name="tel"
@@ -179,5 +181,6 @@
         <a href="tel:+749978468446"> +7 (499) -784-684-46 </a>
       </address>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
