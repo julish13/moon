@@ -7,7 +7,7 @@ $promo-mobile-height: 390px;
   @media #{$max-tablet} {
     width: auto;
     min-height: $promo-tablet-height;
-    background-color: $basic-black;
+    background-color: $black-1;
     background-image: url("../img/bg-tablet.jpg");
     background-repeat: no-repeat;
     background-position: center;

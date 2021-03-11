@@ -1,0 +1,44 @@
+.about h2 {
+  margin: {
+    top: 0;
+    bottom: 50px;
+  }
+  color: $black-2;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  text-align: center;
+}
+
+.about ol {
+  display: grid;
+  grid-template-columns: repeat(4, 263px);
+  grid-column-gap: 38px;
+  margin: 0 auto;
+  padding-left: 0;
+  width: min-content;
+  list-style: none;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+
+.about li {
+  position: relative;
+  padding-top: 52px;
+  counter-increment: myCounter;
+
+  &::before {
+    content: "0" counter(myCounter);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $basic-turquoise;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
