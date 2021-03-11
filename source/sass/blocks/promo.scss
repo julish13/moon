@@ -1,4 +1,5 @@
 $promo-tablet-height: 340px;
+$promo-mobile-height: 390px;
 
 .promo {
   width: 393px;
@@ -12,6 +13,12 @@ $promo-tablet-height: 340px;
     background-position: center;
     background-size: 768px $promo-tablet-height;
     color: $basic-white;
+  }
+
+  @media #{$max-mobile} {
+    min-height: $promo-mobile-height;
+    background-image: url("../img/bg-mobile.jpg");
+    background-size: 320px $promo-mobile-height;
   }
 }
 
@@ -48,6 +55,11 @@ $promo-tablet-height: 340px;
     width: 435px;
     font-size: 18px;
     text-align: center;
+  }
+
+  @media #{$max-mobile} {
+    @include container-mobile;
+    width: auto;
   }
 
   &:last-of-type {

@@ -4,6 +4,10 @@
   @media #{$max-tablet} {
     width: 323px;
   }
+
+  @media #{$max-mobile} {
+    width: auto;
+  }
 }
 
 .feedback p {
@@ -20,5 +24,9 @@
   @media #{$max-tablet} {
     margin-bottom: 30px;
     font-size: 18px;
+  }
+
+  @media #{$max-mobile} {
+    margin-bottom: 20px;
   }
 }

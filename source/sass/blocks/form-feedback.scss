@@ -17,6 +17,10 @@
     padding: 11px 21px;
   }
 
+  @media #{$max-mobile} {
+    padding: 12px 25px 10px;
+  }
+
   &::placeholder {
     color: rgba($grey-1, 0.5);
   }
@@ -28,8 +32,13 @@
   border-radius: 6px;
   background-color: $basic-turquoise;
   color: $basic-black;
+  font-family: inherit;
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;
   word-break: break-word;
+
+  @media #{$max-mobile} {
+    padding: 13px 15px 16px;
+  }
 }

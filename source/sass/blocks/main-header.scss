@@ -38,6 +38,10 @@ $main-header-desktop-height: 825px;
   @media #{$max-tablet} {
     padding-top: 135px;
   }
+
+  @media #{$max-mobile} {
+    padding-top: 121px;
+  }
 }
 
 .main-header__feedback {
@@ -49,5 +53,9 @@ $main-header-desktop-height: 825px;
       right: auto;
     }
     padding-top: 70px;
+  }
+
+  @media #{$max-mobile} {
+    @include container-mobile;
   }
 }

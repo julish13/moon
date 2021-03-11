@@ -42,6 +42,10 @@
     align-items: flex-end;
     padding-left: 21px;
   }
+
+  @media #{$max-mobile} {
+    padding-left: 17px;
+  }
 }
 
 .main-nav__logo {
