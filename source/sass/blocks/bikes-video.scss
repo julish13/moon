@@ -3,6 +3,10 @@
   min-height: 706px;
   background-color: $black-3;
   color: rgba($basic-white, 0.7);
+
+  @media #{$max-tablet} {
+    min-height: 413px;
+  }
 }
 
 .bikes-video h2 {
@@ -12,6 +16,11 @@
   }
   padding-right: 10px;
   color: $basic-white;
+
+  @media #{$max-tablet} {
+    margin-bottom: 15px;
+    padding-right: 0;
+  }
 }
 
 .bikes-video p {
@@ -23,14 +32,14 @@
   padding-left: 10px;
   width: 340px;
 
+  @media #{$max-tablet} {
+    padding-left: 6px;
+    width: 429px;
+    letter-spacing: -0.005em;
+    text-align: center;
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
 }
-
-// .bikes-video__video {
-//   margin: {
-//     left: auto;
-//     right: auto;
-//   };
-// }

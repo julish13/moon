@@ -50,5 +50,10 @@
 }
 
 .main__bikes-video {
+  margin-bottom: 100px;
   padding-top: 122px;
+
+  @media #{$max-tablet} {
+    padding-top: 64px;
+  }
 }

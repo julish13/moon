@@ -4,9 +4,13 @@
   bottom: -98px;
   transform: translateX(-50%);
   width: max-content;
+
+  @media #{$max-tablet} {
+    bottom: -85px;
+  }
 }
 
-.video button {
+.video__button {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -16,6 +20,19 @@
   border: none;
 }
 
+.video__button svg {
+  @media #{$max-tablet} {
+    width: 90px;
+    height: 90px;
+  }
+}
+
 .video img {
   display: block;
+
+  @media #{$max-tablet} {
+    width: 503px;
+    height: 282px;
+    object-fit: cover;
+  }
 }
