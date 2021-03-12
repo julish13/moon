@@ -1,32 +1,68 @@
-.type {
-  position: relative;
-}
-
 .type--city {
   padding: {
-    top: 43px;
-    left: 60px;
+    top: 10px;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 199px;
-    left: 0;
-    border: 27px solid $basic-turquoise;
-    border-radius: 50%;
-    width: 180px;
-    height: 180px;
+  @media #{$max-tablet} {
+    padding: {
+      top: 0;
+      // left: 37px;
+    };
   }
 }
 
 .type--mountain {
   padding: {
-    top: 72px;
-    left: 21px;
-    right: 24px;
+    top: 39px;
   }
 
+  @media #{$max-tablet} {
+    padding: {
+      top: 0;
+      // left: 0;
+      // right: 59px;
+    }
+  }
+}
+
+.type--kids {
+  @media #{$max-tablet} {
+    padding: {
+      // top: 20px;
+      // right: 25px;
+    }
+  }
+}
+
+.type__wrapper {
+  position: relative;
+}
+
+.type__wrapper--city {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 49%;
+    left: -59px;
+    transform: translateY(-50%);
+    border: 27px solid $basic-turquoise;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+
+    @media #{$max-tablet} {
+      top: unset;
+      bottom: -28px;
+      left: -37px;
+      transform: none;
+      border-width: 18px;
+      width: 127px;
+      height: 127px;
+    }
+  }
+}
+
+.type__wrapper--mountain {
   &::before,
   &::after {
     content: "";
@@ -35,44 +71,70 @@
     border: 8px solid $basic-turquoise;
     width: 47px;
     height: 47px;
+
+    @media #{$max-tablet} {
+      display: none;
+    }
   }
 
   &::before {
-    left: 0;
-    top: 54px;
+    left: -19px;
+    top: -18px;
   }
 
   &::after {
-    right: 0;
-    top: 614px;
+    right: -23px;
+    bottom: -23px;
   }
 }
 
-.type--kids {
-  padding: {
-    top: 32px;
-    right: 36px;
-  }
-
+.type__wrapper--kids {
   &::before {
     content: "";
     position: absolute;
     z-index: 1;
-    top: 0;
-    right: 0;
+    top: -32px;
+    right: -36px;
     border: 17px solid $basic-turquoise;
     border-radius: 50%;
     width: 95px;
     height: 95px;
+
+    @media #{$max-tablet} {
+      top: -20px;
+      right: -25px;
+      border-width: 13px;
+      width: 68px;
+      height: 68px;
+    }
   }
 }
 
-.type img {
+.type__wrapper img {
   position: relative;
   z-index: 0;
   display: block;
   margin-bottom: 20px;
   border-radius: 10px;
+
+  @media #{$max-tablet} {
+    width: 270px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% bottom;
+  }
+}
+
+.type--city img {
+  @media #{$max-tablet} {
+    object-position: 50% 60%;
+  }
+}
+
+.type--mountain img {
+  @media #{$max-tablet} {
+    object-position: 50% 40%;
+  }
 }
 
 .type h3 {
