@@ -37,6 +37,14 @@
     }
     width: auto;
   }
+
+  @media #{$max-mobile} {
+    display: block;
+    padding: {
+      left: 25px;
+      right: 25px;
+    }
+  }
 }
 
 .types li {
@@ -44,9 +52,17 @@
     margin-bottom: 50px;
   }
 
+  @media #{$max-mobile} {
+    margin-bottom: 42px;
+  }
+
   &:nth-child(2n + 1) {
     @media #{$max-tablet} {
       margin-right: 50px;
+    }
+
+    @media #{$max-mobile} {
+      margin-right: 0;
     }
   }
 

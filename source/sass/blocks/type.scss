@@ -59,6 +59,10 @@
       width: 127px;
       height: 127px;
     }
+
+    @media #{$max-mobile} {
+      left: -26px;
+    }
   }
 }
 
@@ -106,6 +110,10 @@
       border-width: 13px;
       width: 68px;
       height: 68px;
+    }
+
+    @media #{$max-mobile} {
+      right: -14px;
     }
   }
 }
