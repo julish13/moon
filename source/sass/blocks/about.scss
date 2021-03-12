@@ -1,19 +1,8 @@
 .about h2 {
-  margin: {
-    top: 0;
-    bottom: 50px;
-  }
-  color: $black-2;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
-  letter-spacing: -0.005em;
-  text-align: center;
+  margin-bottom: 50px;
 
   @media #{$max-tablet} {
     margin-bottom: 30px;
-    font-size: 24px;
-    line-height: 41px;
   }
 }
 

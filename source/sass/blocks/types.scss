@@ -1,0 +1,16 @@
+.types h2 {
+  margin-bottom: 17px;
+}
+
+.types ul {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-gap: 28px;
+  margin: 0 auto;
+  padding: {
+    left: 97px;
+    right: 121px;
+  }
+  width: min-content;
+  list-style: none;
+}

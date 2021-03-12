@@ -23,14 +23,13 @@ $promo-mobile-height: 390px;
 }
 
 .promo h2 {
-  margin: {
-    top: 0;
-    bottom: 25px;
-  }
+  margin-bottom: 25px;
+  color: $basic-white;
   font-weight: bold;
   font-size: 46px;
   line-height: 64px;
   letter-spacing: -0.005em;
+  text-align: left;
 
   @media #{$max-tablet} {
     margin-bottom: 19px;
