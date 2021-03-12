@@ -8,6 +8,10 @@
   @media #{$max-tablet} {
     bottom: -85px;
   }
+
+  @media #{$max-mobile} {
+    bottom: -49px;
+  }
 }
 
 .video__button {
@@ -25,6 +29,11 @@
     width: 90px;
     height: 90px;
   }
+
+  @media #{$max-mobile} {
+    width: 65px;
+    height: 65px;
+  }
 }
 
 .video img {
@@ -34,5 +43,10 @@
     width: 503px;
     height: 282px;
     object-fit: cover;
+  }
+
+  @media #{$max-mobile} {
+    width: 288px;
+    height: 162px;
   }
 }

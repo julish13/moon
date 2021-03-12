@@ -45,7 +45,10 @@
   }
 
   @media #{$max-mobile} {
-    padding-top: 47px;
+    padding: {
+      top: 47px;
+      bottom: 54px;
+    }
   }
 }
 
@@ -55,5 +58,10 @@
 
   @media #{$max-tablet} {
     padding-top: 64px;
+  }
+
+  @media #{$max-mobile} {
+    @include container-mobile;
+    padding-top: 78px;
   }
 }

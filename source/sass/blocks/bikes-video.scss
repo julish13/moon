@@ -7,6 +7,10 @@
   @media #{$max-tablet} {
     min-height: 413px;
   }
+
+  @media #{$max-mobile} {
+    min-height: 384px;
+  }
 }
 
 .bikes-video h2 {
@@ -20,6 +24,10 @@
   @media #{$max-tablet} {
     margin-bottom: 15px;
     padding-right: 0;
+  }
+
+  @media #{$max-mobile} {
+    padding-right: 8px;
   }
 }
 
@@ -37,6 +45,11 @@
     width: 429px;
     letter-spacing: -0.005em;
     text-align: center;
+  }
+
+  @media #{$max-mobile} {
+    padding-left: 0;
+    width: auto;
   }
 
   &:last-of-type {
