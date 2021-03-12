@@ -1,0 +1,42 @@
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  grid-column-gap: 90px;
+  grid-row-gap: 20px;
+  color: rgba($black-1, 0.5);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media #{$max-mobile} {
+    grid-template-columns: max-content;
+    grid-row-gap: 23px;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  justify-content: center;
+  color: inherit;
+  font-style: normal;
+
+  &--mail {
+    @media #{$max-mobile} {
+      padding-left: 8px;
+    }
+  }
+
+  &--phone {
+    @media #{$max-mobile} {
+      padding-right: 12px;
+    }
+  }
+}
+
+.contacts__link svg {
+  margin-right: 15px;
+  fill: transparent;
+}
+
+

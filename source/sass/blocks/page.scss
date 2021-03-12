@@ -16,3 +16,11 @@
   background-color: $basic-white;
   color: $black-1;
 }
+
+.page__footer {
+  padding-bottom: 98px;
+
+  @media #{$max-tablet} {
+    padding-bottom: 53px;
+  }
+}
