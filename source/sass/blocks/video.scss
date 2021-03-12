@@ -1,0 +1,21 @@
+.video {
+  position: absolute;
+  left: 50%;
+  bottom: -98px;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
+.video button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+}
+
+.video img {
+  display: block;
+}
