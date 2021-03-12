@@ -222,7 +222,21 @@
         <p>
           Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
         </p>
-        <div class="map"></div>
+        <div class="address__map map" id="map">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="img/content/map.webp 1x, img/content/map.webp 2x"
+            />
+            <img
+              width="957"
+              height="530"
+              src="img/content/map.png"
+              srcset="img/content/map@2x.png 2x"
+              alt="ул. Большая Конюшенная, 19"
+            />
+          </picture>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
@@ -234,5 +248,9 @@
       </address>
     </footer>
     <script src="js/main.js"></script>
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmwjGqbP-jxTZ8QsfhLzsMq8csUyF2tk&callback=initMap"
+    ></script>
   </body>
 </html>

@@ -1,0 +1,45 @@
+.address h2 {
+  margin-bottom: 30px;
+
+  @media #{$max-tablet} {
+    margin-bottom: 15px;
+  }
+
+  @media #{$max-mobile} {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.005em;
+  }
+}
+
+.address p {
+  margin: 0 auto 39px;
+  padding-right: 15px;
+  width: 555px;
+  color: rgba($black-1, 0.7);
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 31px;
+  text-align: center;
+
+  @media #{$max-tablet} {
+    margin-bottom: 20px;
+    padding-right: 0;
+    width: auto;
+  }
+
+  @media #{$max-mobile} {
+    padding: {
+      left: 30px;
+      right: 30px;
+    }
+  }
+}
+
+.address__map {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}

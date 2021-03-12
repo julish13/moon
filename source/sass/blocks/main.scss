@@ -65,3 +65,23 @@
     padding-top: 78px;
   }
 }
+
+.main__address {
+  padding-top: 150px;
+
+  @media #{$max-tablet} {
+    padding: {
+      top: 49px;
+      left: 35px;
+      right: 35px;
+    }
+  }
+
+  @media #{$max-mobile} {
+    padding: {
+      top: 19px;
+      left: 0;
+      right: 0;
+    }
+  }
+}
