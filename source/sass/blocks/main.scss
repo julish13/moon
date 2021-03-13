@@ -14,10 +14,16 @@
 }
 
 .main__header {
-  padding-top: 318px;
+  padding: {
+    top: 318px;
+    bottom: 20px;
+  }
 
   @media #{$max-tablet} {
-    padding-top: 0;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
   }
 }
 
@@ -58,14 +64,23 @@
 
 .main__bikes-video {
   margin-bottom: 100px;
-  padding-top: 122px;
+  padding: {
+    top: 122px;
+    bottom: 20px;
+  }
 
   @media #{$max-tablet} {
-    padding-top: 64px;
+    padding: {
+      top: 64px;
+      bottom: 20px;
+    }
   }
 
   @media #{$max-mobile} {
-    padding-top: 78px;
+    padding: {
+      top: 78px;
+      bottom: 20px;
+    }
   }
 }
 
