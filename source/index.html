@@ -102,9 +102,14 @@
           <section class="main-header__feedback feedback">
             <h2 class="visually-hidden">Обратная связь</h2>
             <p>Заполните поля ниже и&nbsp;мы подберем велосипед Вашей мечты</p>
-            <form class="form-feedback">
+            <form
+              class="form-feedback"
+              action="https://echo.htmlacademy.ru"
+              method="post"
+            >
               <label class="visually-hidden" for="name"></label>
               <input
+                required
                 type="text"
                 name="name"
                 id="name"
@@ -112,6 +117,7 @@
               />
               <label class="visually-hidden" for="tel"></label>
               <input
+                required
                 type="tel"
                 name="tel"
                 id="tel"
