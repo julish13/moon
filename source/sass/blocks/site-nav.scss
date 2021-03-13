@@ -62,4 +62,23 @@
 .site-nav__item a {
   display: block;
   color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $basic-white;
+
+    @media #{$max-tablet} {
+      color: $black-1;
+      font-weight: 600;
+    }
+  }
+
+  &:active {
+    color: rgba($basic-white, 0.5);
+
+    @media #{$max-tablet} {
+      font-weight: 600;
+      color: rgba($black-1, 0.3);
+    }
+  }
 }

@@ -55,8 +55,4 @@ $main-header-desktop-height: 825px;
     }
     padding-top: 70px;
   }
-
-  @media #{$max-mobile} {
-    @include container-mobile;
-  }
 }

@@ -65,6 +65,7 @@
   display: none;
 
   @media #{$max-tablet} {
+    cursor: pointer;
     position: relative;
     display: block;
     margin-left: auto;
@@ -77,6 +78,15 @@
 .main-nav__toggle--closed {
   @media #{$max-tablet} {
     background-color: $basic-turquoise;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($basic-turquoise, 5);
+  }
+
+  &:active {
+    background-color: darken($basic-turquoise, 20);
   }
 
   &::before {
@@ -116,6 +126,21 @@
 
   &::after {
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $grey-3;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: rgba($grey-3, 0.5);
+    }
   }
 }
 

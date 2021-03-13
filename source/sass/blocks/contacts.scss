@@ -21,6 +21,15 @@
   color: inherit;
   font-style: normal;
 
+  &:hover,
+  &:focus {
+    color: $black-1;
+  }
+
+  &:active {
+    color: rgba($black-1, 0.7);
+  }
+
   &--mail {
     @media #{$max-mobile} {
       padding-left: 8px;
