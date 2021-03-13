@@ -18,9 +18,7 @@ $min-desktop: (
   min-width: $desktop-width,
 );
 
-$mobile-padding: 16px;
-$tablet-padding: 21px;
-$desktop-padding: 375px;
+$desktop-header-width: 880px;
 
 $basic-white: hsl(0, 0, 100%);
 $basic-turquoise: hsl(174, 91%, 44%);

@@ -1,3 +1,7 @@
+.type {
+  width: fit-content;
+}
+
 .type--city {
   padding: {
     top: 10px;
@@ -36,6 +40,8 @@
 
 .type__wrapper {
   position: relative;
+  margin-bottom: 20px;
+  width: fit-content;
 }
 
 .type__wrapper--city {
@@ -122,7 +128,7 @@
   position: relative;
   z-index: 0;
   display: block;
-  margin-bottom: 20px;
+
   border-radius: 10px;
 
   @media #{$max-tablet} {

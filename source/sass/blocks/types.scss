@@ -14,15 +14,16 @@
 
 .types ul {
   display: grid;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(auto-fit, minmax(0, max-content));
+  justify-content: center;
   grid-gap: 50px;
   margin: 0 auto;
   padding: {
     top: 33px;
-    left: 60px;
-    right: 60px;
+    left: 80px;
+    right: 80px;
   }
-  width: min-content;
+  width: 100%;
   list-style: none;
 
   @media #{$max-tablet} {
@@ -48,21 +49,25 @@
 }
 
 .types li {
+  width: fit-content;
+
   @media #{$max-tablet} {
     margin-bottom: 50px;
+    padding: {
+      left: 25px;
+      right: 25px;
+    }
   }
 
   @media #{$max-mobile} {
-    margin-bottom: 42px;
-  }
-
-  &:nth-child(2n + 1) {
-    @media #{$max-tablet} {
-      margin-right: 50px;
+    margin: {
+      right: auto;
+      left: auto;
+      bottom: 42px;
     }
-
-    @media #{$max-mobile} {
-      margin-right: 0;
+    padding: {
+      left: 0;
+      right: 0;
     }
   }
 
@@ -70,7 +75,6 @@
     @media #{$max-tablet} {
       margin: {
         bottom: 0;
-        right: 0;
       }
     }
   }

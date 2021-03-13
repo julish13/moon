@@ -25,7 +25,7 @@ $main-header-desktop-height: 825px;
     right: auto;
     left: auto;
   }
-  width: 880px;
+  width: $desktop-header-width;
 
   @media #{$max-tablet} {
     display: block;

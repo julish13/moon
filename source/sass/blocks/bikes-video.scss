@@ -1,3 +1,9 @@
+.bikes-video__container {
+  @media #{$max-mobile} {
+    @include container-mobile;
+  }
+}
+
 .bikes-video {
   position: relative;
   min-height: 706px;

@@ -23,14 +23,19 @@
 
 .main__about {
   padding-top: 150px;
-  margin-bottom: 303px;
+  margin-bottom: 284px;
 
   @media #{$max-tablet} {
-    margin-bottom: 23px;
+    margin-bottom: 0;
     padding: {
       top: 70px;
-      bottom: 48px;
+      bottom: 31px;
     }
+  }
+
+  @media #{$max-mobile} {
+    margin-bottom: 0;
+    padding-bottom: 71px;
   }
 }
 
@@ -46,7 +51,6 @@
 
   @media #{$max-mobile} {
     padding: {
-      top: 47px;
       bottom: 54px;
     }
   }
@@ -61,7 +65,6 @@
   }
 
   @media #{$max-mobile} {
-    @include container-mobile;
     padding-top: 78px;
   }
 }
