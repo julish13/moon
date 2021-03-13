@@ -78,76 +78,99 @@
           <section class="main-header__feedback feedback">
             <h2 class="visually-hidden">Обратная связь</h2>
             <p>Заполните поля ниже и&nbsp;мы подберем велосипед Вашей мечты</p>
-            <form class="form-feedback">
+            <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="name"></label>
-              <input type="text" name="name" id="name" placeholder="Введите Ваше Имя">
+              <input required="" type="text" name="name" id="name" placeholder="Введите Ваше Имя">
               <label class="visually-hidden" for="tel"></label>
-              <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона">
+              <input required="" type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона">
               <button type="submit">Подобрать велосипед мечты</button>
             </form>
           </section>
         </div>
       </header>
-      <section class="main__about about">
+      <section class="main__about about container">
         <h2>Несколько фактов о&nbsp;нас</h2>
         <ol>
-          <li>Самый широкий выбор велосипедов!</li>
-          <li>Доставка велосипедов по&nbsp;всей России!</li>
-          <li>Большой выбор крутых аксессуаров!</li>
-          <li>Профессиональные консультации!</li>
+          <li><p>Самый широкий выбор велосипедов!</p></li>
+          <li><p>Доставка велосипедов по&nbsp;всей России!</p></li>
+          <li><p>Большой выбор крутых аксессуаров!</p></li>
+          <li><p>Профессиональные консультации!</p></li>
         </ol>
       </section>
-      <section class="main__types types">
+      <section class="main__types types container">
         <h2>Виды велосипедов</h2>
         <ul>
           <li>
-            <article class="type type--city">
+            <a class="type type--city" href="#">
               <div class="type__wrapper type__wrapper--city">
-                <img width="342" height="503" src="img/content/city-bike.jpg" alt="Фото серого дорожного велосипеда у кирпичной стены">
+                <picture>
+                  <source type="image/webp" srcset="
+                      img/content/city-bike.webp    1x,
+                      img/content/city-bike@2x.webp 2x
+                    ">
+                  <img width="342" height="503" src="img/content/city-bike.jpg" srcset="img/content/city-bike@2x.jpg 2x" alt="Фото серого дорожного велосипеда у кирпичной стены">
+                </picture>
               </div>
               <h3>Дорожный велосипед</h3>
-            </article>
+            </a>
           </li>
           <li>
-            <article class="type type--mountain">
+            <a class="type type--mountain" href="#">
               <div class="type__wrapper type__wrapper--mountain">
-                <img width="342" height="566" src="img/content/mountain-bike.jpg" alt="Фото горного велосипеда на вершине на фоне гор">
+                <picture>
+                  <source type="image/webp" srcset="
+                      img/content/mountain-bike.webp    1x,
+                      img/content/mountain-bike@2x.webp 2x
+                    ">
+                  <img width="342" height="566" src="img/content/mountain-bike.jpg" srcset="img/content/mountain-bike@2x.jpg 2x" alt="Фото горного велосипеда на вершине на фоне гор">
+                </picture>
               </div>
               <h3>Горный велосипед</h3>
-            </article>
+            </a>
           </li>
           <li>
-            <article class="type type--kids">
+            <a class="type type--kids" href="#">
               <div class="type__wrapper type__wrapper--kids">
-                <img width="342" height="513" src="img/content/kids-bike.jpg" alt="Фото розового детского велосипеда на улице города">
+                <picture>
+                  <source type="image/webp" srcset="
+                      img/content/kids-bike.webp    1x,
+                      img/content/kids-bike@2x.webp 2x
+                    ">
+                  <img width="342" height="513" src="img/content/kids-bike.jpg" srcset="img/content/kids-bike@2x.jpg 2x" alt="Фото розового детского велосипеда на улице города">
+                </picture>
               </div>
               <h3>Детский велосипед</h3>
-            </article>
+            </a>
           </li>
         </ul>
       </section>
       <section class="main__bikes-video bikes-video">
-        <h2>Видео про велосипеды</h2>
-        <p>
-          В&nbsp;этом видео мы&nbsp;подробно расскажем про особенности выбора
-          велосипеда для себя.
-        </p>
-        <div class="bikes-video__video video">
-          <a href="#">
-            <picture>
-              <!-- <source srcset="#" type="image/webp"> -->
-              <img width="929" height="522" src="img/content/video.jpg" alt="Видео про велосипеды">
-            </picture>
-          </a>
-          <button class="video__button" aria-label="Запустить видео">
-            <svg width="65px" height="65px" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5 65a32.5 32.5 0 100-65 32.5 32.5 0 000 65z" fill="#0AD9C6"></path>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6 23.4l13 9.1-13 9.1V23.4z" fill="#070707"></path>
-            </svg>
-          </button>
+        <div class="bikes-video__container container">
+          <h2>Видео про велосипеды</h2>
+          <p>
+            В&nbsp;этом видео мы&nbsp;подробно расскажем про особенности выбора
+            велосипеда для себя.
+          </p>
+          <div class="bikes-video__video video">
+            <a href="#">
+              <picture>
+                <source type="image/webp" srcset="
+                    img/content/video.webp    1x,
+                    img/content/video@2x.webp 2x
+                  ">
+                <img width="929" height="522" src="img/content/video.jpg" srcset="img/content/video@2x.jpg 2x" alt="Видео про велосипеды">
+              </picture>
+            </a>
+            <button class="video__button" aria-label="Запустить видео">
+              <svg width="65px" height="65px" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
+                <path class="video__button-shape" fill-rule="evenodd" clip-rule="evenodd" d="M32.5 65a32.5 32.5 0 100-65 32.5 32.5 0 000 65z" fill="#0AD9C6"></path>
+                <path class="video__button-inner" fill-rule="evenodd" clip-rule="evenodd" d="M28.6 23.4l13 9.1-13 9.1V23.4z" fill="#070707"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
-      <section class="main__address address">
+      <section class="main__address address container">
         <h2>Как нас найти?</h2>
         <p>
           Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
@@ -160,7 +183,7 @@
         </div>
       </section>
     </main>
-    <footer class="page__footer page-footer">
+    <footer class="page__footer page-footer container">
       <address class="page-footer__contacts contacts">
         <a class="contacts__link contacts__link--mail" href="mailto:puteshestviemechta@gmail.ru">
           <svg role="img" width="26" height="20">
