@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Магазин велосипедов Moon</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/open-sans-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* Mobile layout by default */
+        background-image: url("./pixel-glass/images/mobile.png");
+      }
+      /* Tablet */
+      @media (min-width: 768px) {
+        HTML {
+          /* Tablet layout */
+          background-image: url("./pixel-glass/images/tablet.png");
+        }
+      }
+      /* Desktop */
+      @media (min-width: 1024px) {
+        HTML {
+          /* Desktop layout */
+          background-image: url("./pixel-glass/images/desktop.png");
+        }
+      }
+    </style>
+    <link href="./pixel-glass/styles.css" rel="stylesheet">
+    <script src="./pixel-glass/script.js"></script>
+  </head>
+  <body class="page__body">
+    <header class="page__header page-header">
+      <nav class="page-header__main-nav main-nav main-nav--no-js">
+        <div class="main-nav__header">
+          <a class="main-nav__logo main-nav__logo--no-js logo">
+            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 21" width="67.6px" height="20.28px">
+              <path d="M13.36 0v20.05h-3.29V5.82l-1.1 1.39-2.15 2.76-.09.1-.14-.1-2.15-2.76-1.1-1.43v14.27H0V0h3.34l3.39 4.3L10.07 0h3.3zM8.3 10.07l-.1-.1.1.1z" fill="#0AD9C6"></path>
+              <path d="M8.45 9.97l-.1.1H8.3l.15-.1zM38.2 5.61l-9.12 6.7 2.12 2.88 9.12-6.7-2.11-2.88z" fill="#0AD9C6"></path>
+              <path d="M26.67 3a7.04 7.04 0 100 14.09 7.04 7.04 0 000-14.09zm0 10.27a3.22 3.22 0 110-6.45 3.22 3.22 0 010 6.45zM43.64 3a7.04 7.04 0 107.04 7.04A7.1 7.1 0 0043.64 3zm0 10.27a3.22 3.22 0 110-6.45 3.22 3.22 0 010 6.45zM67.6.24v20.04h-3.34V9.88l-2.82-2.67-2.1-2.06v15.13H56V.24h3.34L63.25 4l1 .95V.24h3.35z" fill="#0AD9C6"></path>
+              <path fill="#0AD9C6" d="M37 3h6v4h-6z"></path>
+            </svg>
+          </a>
+          <button class="main-nav__toggle main-nav__toggle--no-js" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <div class="main-nav__site-nav main-nav__site-nav--no-js site-nav">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a href="#">О&nbsp;нас</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Виды велосипедов</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Видео про велосипеды</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
+      <header class="main__header main-header">
+        <div class="main-header__wrapper">
+          <section class="main-header__promo promo">
+            <h2>Мы&nbsp;продаем велосипеды</h2>
+            <p>
+              Наш магазин отбирает только самые лучшие велосипеды для продажи
+            </p>
+          </section>
+          <section class="main-header__feedback feedback">
+            <h2 class="visually-hidden">Обратная связь</h2>
+            <p>Заполните поля ниже и&nbsp;мы подберем велосипед Вашей мечты</p>
+            <form class="form-feedback">
+              <label class="visually-hidden" for="name"></label>
+              <input type="text" name="name" id="name" placeholder="Введите Ваше Имя">
+              <label class="visually-hidden" for="tel"></label>
+              <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона">
+              <button type="submit">Подобрать велосипед мечты</button>
+            </form>
+          </section>
+        </div>
+      </header>
+      <section class="main__about about">
+        <h2>Несколько фактов о&nbsp;нас</h2>
+        <ol>
+          <li>Самый широкий выбор велосипедов!</li>
+          <li>Доставка велосипедов по&nbsp;всей России!</li>
+          <li>Большой выбор крутых аксессуаров!</li>
+          <li>Профессиональные консультации!</li>
+        </ol>
+      </section>
+      <section class="main__types types">
+        <h2>Виды велосипедов</h2>
+        <ul>
+          <li>
+            <article class="type type--city">
+              <div class="type__wrapper type__wrapper--city">
+                <img width="342" height="503" src="img/content/city-bike.jpg" alt="Фото серого дорожного велосипеда у кирпичной стены">
+              </div>
+              <h3>Дорожный велосипед</h3>
+            </article>
+          </li>
+          <li>
+            <article class="type type--mountain">
+              <div class="type__wrapper type__wrapper--mountain">
+                <img width="342" height="566" src="img/content/mountain-bike.jpg" alt="Фото горного велосипеда на вершине на фоне гор">
+              </div>
+              <h3>Горный велосипед</h3>
+            </article>
+          </li>
+          <li>
+            <article class="type type--kids">
+              <div class="type__wrapper type__wrapper--kids">
+                <img width="342" height="513" src="img/content/kids-bike.jpg" alt="Фото розового детского велосипеда на улице города">
+              </div>
+              <h3>Детский велосипед</h3>
+            </article>
+          </li>
+        </ul>
+      </section>
+      <section class="main__bikes-video bikes-video">
+        <h2>Видео про велосипеды</h2>
+        <p>
+          В&nbsp;этом видео мы&nbsp;подробно расскажем про особенности выбора
+          велосипеда для себя.
+        </p>
+        <div class="bikes-video__video video">
+          <a href="#">
+            <picture>
+              <!-- <source srcset="#" type="image/webp"> -->
+              <img width="929" height="522" src="img/content/video.jpg" alt="Видео про велосипеды">
+            </picture>
+          </a>
+          <button class="video__button" aria-label="Запустить видео">
+            <svg width="65px" height="65px" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M32.5 65a32.5 32.5 0 100-65 32.5 32.5 0 000 65z" fill="#0AD9C6"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.6 23.4l13 9.1-13 9.1V23.4z" fill="#070707"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="main__address address">
+        <h2>Как нас найти?</h2>
+        <p>
+          Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
+        </p>
+        <div class="address__map map" id="map">
+          <picture>
+            <source type="image/webp" srcset="img/content/map.webp 1x, img/content/map.webp 2x">
+            <img width="957" height="530" src="img/content/map.png" srcset="img/content/map@2x.png 2x" alt="ул. Большая Конюшенная, 19">
+          </picture>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer page-footer">
+      <address class="page-footer__contacts contacts">
+        <a class="contacts__link contacts__link--mail" href="mailto:puteshestviemechta@gmail.ru">
+          <svg role="img" width="26" height="20">
+            <use xlink:href="img/sprite.svg#mail-icon"></use>
+          </svg>
+          <span>puteshestviemechta@gmail.ru</span>
+        </a>
+        <a class="contacts__link contacts__link--phone" href="tel:+749978468446">
+          <svg role="img" width="21.5" height="22.62">
+            <use xlink:href="img/sprite.svg#phone-icon"></use>
+          </svg>
+          <span>+7 (499) -784-684-46</span>
+        </a>
+      </address>
+    </footer>
+    <script src="js/main.js"></script>
+    <script defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmwjGqbP-jxTZ8QsfhLzsMq8csUyF2tk&callback=initMap"></script>
+  </body>
+</html>
