@@ -13,12 +13,20 @@ $promo-mobile-height: 390px;
     background-position: center;
     background-size: 768px $promo-tablet-height;
     color: $basic-white;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-tablet@2x.jpg");
+    }
   }
 
   @media #{$max-mobile} {
     min-height: $promo-mobile-height;
     background-image: url("../img/bg-mobile.jpg");
     background-size: 320px $promo-mobile-height;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-mobile@2x.jpg");
+    }
   }
 }
 

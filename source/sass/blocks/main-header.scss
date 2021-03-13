@@ -9,6 +9,10 @@ $main-header-desktop-height: 825px;
   background-size: 1440px $main-header-desktop-height;
   color: $basic-white;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-desktop@2x.jpg");
+  }
+
   @media #{$max-tablet} {
     min-height: auto;
     background-color: inherit;
