@@ -115,7 +115,7 @@
                 id="name"
                 placeholder="Введите Ваше Имя"
               />
-              <label class="visually-hidden" for="tel"></label>
+               <label class="visually-hidden" for="tel"></label>
               <input
                 required
                 type="tel"
@@ -151,6 +151,7 @@
                       img/content/city-bike@2x.webp 2x
                     "
                   />
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img
                     width="342"
                     height="503"
@@ -174,6 +175,7 @@
                       img/content/mountain-bike@2x.webp 2x
                     "
                   />
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img
                     width="342"
                     height="566"
@@ -197,6 +199,7 @@
                       img/content/kids-bike@2x.webp 2x
                     "
                   />
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img
                     width="342"
                     height="513"
@@ -228,6 +231,7 @@
                     img/content/video@2x.webp 2x
                   "
                 />
+                <!-- 1х: 929px; 2x: 1858px -->
                 <img
                   width="929"
                   height="522"
@@ -275,6 +279,7 @@
               type="image/webp"
               srcset="img/content/map.webp 1x, img/content/map.webp 2x"
             />
+            <!-- 1х: 957px; 2x: 1914px -->
             <img
               width="957"
               height="530"
@@ -288,24 +293,22 @@
     </main>
     <footer class="page__footer page-footer container">
       <address class="page-footer__contacts contacts">
-        <a
-          class="contacts__link contacts__link--mail"
-          href="mailto:puteshestviemechta@gmail.ru"
-        >
-          <svg role="img" width="26" height="20">
-            <use xlink:href="img/sprite.svg#mail-icon"></use>
-          </svg>
-          <span>puteshestviemechta@gmail.ru</span>
-        </a>
-        <a
-          class="contacts__link contacts__link--phone"
-          href="tel:+749978468446"
-        >
-          <svg role="img" width="21.5" height="22.62">
-            <use xlink:href="img/sprite.svg#phone-icon"></use>
-          </svg>
-          <span>+7 (499) -784-684-46</span>
-        </a>
+        <div class="contacts__link contacts__link--mail">
+          <a href="mailto:puteshestviemechta@gmail.ru">
+            <svg role="img" width="26" height="20">
+              <use xlink:href="img/sprite.svg#mail-icon"></use>
+            </svg>
+            <span>puteshestviemechta@gmail.ru</span>
+          </a>
+        </div>
+        <div class="contacts__link contacts__link--phone">
+          <a href="tel:+749978468446">
+            <svg role="img" width="21.5" height="22.62">
+              <use xlink:href="img/sprite.svg#phone-icon"></use>
+            </svg>
+            <span>+7 (499) -784-684-46</span>
+          </a>
+        </div>
       </address>
     </footer>
     <script src="js/main.js"></script>

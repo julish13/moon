@@ -15,7 +15,7 @@
   }
 }
 
-.contacts__link {
+.contacts__link a {
   display: flex;
   justify-content: center;
   color: inherit;
@@ -29,17 +29,17 @@
   &:active {
     color: rgba($black-1, 0.7);
   }
+}
 
-  &--mail {
-    @media #{$max-mobile} {
-      padding-left: 8px;
-    }
+.contacts__link--mail a {
+  @media #{$max-mobile} {
+    padding-left: 8px;
   }
+}
 
-  &--phone {
-    @media #{$max-mobile} {
-      padding-right: 12px;
-    }
+.contacts__link--phone a {
+  @media #{$max-mobile} {
+    padding-right: 12px;
   }
 }
 

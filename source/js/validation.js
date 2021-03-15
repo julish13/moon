@@ -2,7 +2,7 @@
 
 (() => {
   const form = document.querySelector('.form-feedback');
-  const telInputElement = form.querySelector('#tel');
+  const telInputElement = form?.querySelector('#tel');
 
   const regex = /^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 
@@ -15,5 +15,7 @@
     }
     telInputElement.reportValidity();
   }
-  telInputElement.addEventListener('input', onInputCheckTel);
+
+  telInputElement?.addEventListener('input', onInputCheckTel);
+
 })();

@@ -2,9 +2,9 @@
 
 (() => {
   const mainNavElement = document.querySelector('.main-nav');
-  const mainNavLogo = mainNavElement.querySelector('.main-nav__logo');
-  const mainNavToggle = mainNavElement.querySelector('.main-nav__toggle');
-  const mainNavSiteNav = mainNavElement.querySelector('.main-nav__site-nav');
+  const mainNavLogo = mainNavElement?.querySelector('.main-nav__logo');
+  const mainNavToggle = mainNavElement?.querySelector('.main-nav__toggle');
+  const mainNavSiteNav = mainNavElement?.querySelector('.main-nav__site-nav');
 
   const elements = {
     'main-nav': mainNavElement,
@@ -14,15 +14,15 @@
   };
 
   Object.keys(elements).forEach((element) => {
-    elements[element].classList.remove(`${element}--no-js`);
-    elements[element].classList.add(`${element}--closed`);
+    elements[element]?.classList.remove(`${element}--no-js`);
+    elements[element]?.classList.add(`${element}--closed`);
   })
 
 
-  mainNavToggle.addEventListener('click', () => {
+  mainNavToggle?.addEventListener('click', () => {
     Object.keys(elements).forEach((element) => {
-      elements[element].classList.toggle(`${element}--opened`);
-      elements[element].classList.toggle(`${element}--closed`);
+      elements[element]?.classList.toggle(`${element}--opened`);
+      elements[element]?.classList.toggle(`${element}--closed`);
     })
   });
 })();

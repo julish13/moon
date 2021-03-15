@@ -123,7 +123,7 @@ gulp.task("clean", function () {
 
 const scripts = () => {
   return gulp
-  .src(["./source/js/**/*.js"])
+  .src(["./source/js/**/*.js"], { sourcemaps: true })
   .pipe(concat("main.js"))
   .pipe(gulp.dest("./build/js"))
 };
