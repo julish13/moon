@@ -18,6 +18,7 @@ const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const del = require("del");
 const gulpIf = require("gulp-if");
+const removeHtml = require("gulp-remove-html");
 
 let production = false;
 
@@ -100,6 +101,7 @@ const sprite = () => {
 
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(gulpIf(production, removeHtml()))
     .pipe(posthtml([
       include()
     ]))
