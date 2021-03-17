@@ -3,33 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Магазин велосипедов и велосипедных аксессуаров Moon. Доставка по всей России">
     <title>Магазин велосипедов Moon</title>
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/open-sans-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        /* Mobile layout by default */
-        background-image: url("./pixel-glass/images/mobile.png");
-      }
-      /* Tablet */
-      @media (min-width: 768px) {
-        HTML {
-          /* Tablet layout */
-          background-image: url("./pixel-glass/images/tablet.png");
-        }
-      }
-      /* Desktop */
-      @media (min-width: 1024px) {
-        HTML {
-          /* Desktop layout */
-          background-image: url("./pixel-glass/images/desktop.png");
-        }
-      }
-    </style>
-    <link href="./pixel-glass/styles.css" rel="stylesheet">
-    <script src="./pixel-glass/script.js"></script>
+    
   </head>
   <body class="page__body">
     <header class="page__header page-header">
@@ -81,7 +59,7 @@
             <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="name"></label>
               <input required="" type="text" name="name" id="name" placeholder="Введите Ваше Имя">
-              <label class="visually-hidden" for="tel"></label>
+               <label class="visually-hidden" for="tel"></label>
               <input required="" type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона">
               <button type="submit">Подобрать велосипед мечты</button>
             </form>
@@ -108,6 +86,7 @@
                       img/content/city-bike.webp    1x,
                       img/content/city-bike@2x.webp 2x
                     ">
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img width="342" height="503" src="img/content/city-bike.jpg" srcset="img/content/city-bike@2x.jpg 2x" alt="Фото серого дорожного велосипеда у кирпичной стены">
                 </picture>
               </div>
@@ -122,6 +101,7 @@
                       img/content/mountain-bike.webp    1x,
                       img/content/mountain-bike@2x.webp 2x
                     ">
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img width="342" height="566" src="img/content/mountain-bike.jpg" srcset="img/content/mountain-bike@2x.jpg 2x" alt="Фото горного велосипеда на вершине на фоне гор">
                 </picture>
               </div>
@@ -136,6 +116,7 @@
                       img/content/kids-bike.webp    1x,
                       img/content/kids-bike@2x.webp 2x
                     ">
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img width="342" height="513" src="img/content/kids-bike.jpg" srcset="img/content/kids-bike@2x.jpg 2x" alt="Фото розового детского велосипеда на улице города">
                 </picture>
               </div>
@@ -158,6 +139,7 @@
                     img/content/video.webp    1x,
                     img/content/video@2x.webp 2x
                   ">
+                <!-- 1х: 929px; 2x: 1858px -->
                 <img width="929" height="522" src="img/content/video.jpg" srcset="img/content/video@2x.jpg 2x" alt="Видео про велосипеды">
               </picture>
             </a>
@@ -178,6 +160,7 @@
         <div class="address__map map" id="map">
           <picture>
             <source type="image/webp" srcset="img/content/map.webp 1x, img/content/map.webp 2x">
+            <!-- 1х: 957px; 2x: 1914px -->
             <img width="957" height="530" src="img/content/map.png" srcset="img/content/map@2x.png 2x" alt="ул. Большая Конюшенная, 19">
           </picture>
         </div>
@@ -185,18 +168,22 @@
     </main>
     <footer class="page__footer page-footer container">
       <address class="page-footer__contacts contacts">
-        <a class="contacts__link contacts__link--mail" href="mailto:puteshestviemechta@gmail.ru">
-          <svg role="img" width="26" height="20">
-            <use xlink:href="img/sprite.svg#mail-icon"></use>
-          </svg>
-          <span>puteshestviemechta@gmail.ru</span>
-        </a>
-        <a class="contacts__link contacts__link--phone" href="tel:+749978468446">
-          <svg role="img" width="21.5" height="22.62">
-            <use xlink:href="img/sprite.svg#phone-icon"></use>
-          </svg>
-          <span>+7 (499) -784-684-46</span>
-        </a>
+        <div class="contacts__link contacts__link--mail">
+          <a href="mailto:puteshestviemechta@gmail.ru">
+            <svg role="img" width="26" height="20">
+              <use xlink:href="img/sprite.svg#mail-icon"></use>
+            </svg>
+            <span>puteshestviemechta@gmail.ru</span>
+          </a>
+        </div>
+        <div class="contacts__link contacts__link--phone">
+          <a href="tel:+749978468446">
+            <svg role="img" width="21.5" height="22.62">
+              <use xlink:href="img/sprite.svg#phone-icon"></use>
+            </svg>
+            <span>+7 (499) -784-684-46</span>
+          </a>
+        </div>
       </address>
     </footer>
     <script src="js/main.js"></script>

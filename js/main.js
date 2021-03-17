@@ -12,9 +12,9 @@ function initMap() {
 
 (() => {
   const mainNavElement = document.querySelector('.main-nav');
-  const mainNavLogo = mainNavElement.querySelector('.main-nav__logo');
-  const mainNavToggle = mainNavElement.querySelector('.main-nav__toggle');
-  const mainNavSiteNav = mainNavElement.querySelector('.main-nav__site-nav');
+  const mainNavLogo = mainNavElement?.querySelector('.main-nav__logo');
+  const mainNavToggle = mainNavElement?.querySelector('.main-nav__toggle');
+  const mainNavSiteNav = mainNavElement?.querySelector('.main-nav__site-nav');
 
   const elements = {
     'main-nav': mainNavElement,
@@ -24,15 +24,15 @@ function initMap() {
   };
 
   Object.keys(elements).forEach((element) => {
-    elements[element].classList.remove(`${element}--no-js`);
-    elements[element].classList.add(`${element}--closed`);
+    elements[element]?.classList.remove(`${element}--no-js`);
+    elements[element]?.classList.add(`${element}--closed`);
   })
 
 
-  mainNavToggle.addEventListener('click', () => {
+  mainNavToggle?.addEventListener('click', () => {
     Object.keys(elements).forEach((element) => {
-      elements[element].classList.toggle(`${element}--opened`);
-      elements[element].classList.toggle(`${element}--closed`);
+      elements[element]?.classList.toggle(`${element}--opened`);
+      elements[element]?.classList.toggle(`${element}--closed`);
     })
   });
 })();
@@ -41,7 +41,7 @@ function initMap() {
 
 (() => {
   const form = document.querySelector('.form-feedback');
-  const telInputElement = form.querySelector('#tel');
+  const telInputElement = form?.querySelector('#tel');
 
   const regex = /^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 
@@ -54,5 +54,7 @@ function initMap() {
     }
     telInputElement.reportValidity();
   }
-  telInputElement.addEventListener('input', onInputCheckTel);
+
+  telInputElement?.addEventListener('input', onInputCheckTel);
+
 })();
