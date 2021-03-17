@@ -128,6 +128,15 @@ const scripts = () => {
   .pipe(gulp.dest("./build/js"))
 };
 
+const devTools = (done) => {
+  gulp
+    .src(["source/pixel-glass/**/*"], {
+      base: "source",
+    })
+    .pipe(gulp.dest("build"));
+  done();
+};
+
 const clean = () => {
   return del("build");
 };
@@ -148,7 +157,7 @@ const predeploy = gulp.series(productionOn, build);
 
 const dev = gulp.series(
   build,
-  gulp.parallel(gulp.series(server, watcher))
+  gulp.parallel(gulp.series(server, watcher), devTools)
 );
 
 exports.start = dev;
