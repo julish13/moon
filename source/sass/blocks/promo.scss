@@ -1,17 +1,14 @@
-$promo-tablet-height: 340px;
-$promo-mobile-height: 390px;
-
 .promo {
   width: 393px;
 
   @media #{$max-tablet} {
     width: auto;
-    min-height: $promo-tablet-height;
+    min-height: 340px;
     background-color: $black-1;
     background-image: url("../img/bg-tablet.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 768px $promo-tablet-height;
+    background-size: cover;
     color: $basic-white;
 
     @media (min-resolution: 2dppx) {
@@ -20,9 +17,8 @@ $promo-mobile-height: 390px;
   }
 
   @media #{$max-mobile} {
-    min-height: $promo-mobile-height;
+    min-height: 390px;
     background-image: url("../img/bg-mobile.jpg");
-    background-size: 320px $promo-mobile-height;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/bg-mobile@2x.jpg");
