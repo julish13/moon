@@ -1,17 +1,6 @@
 .video {
-  position: absolute;
-  left: 50%;
-  bottom: -98px;
-  transform: translateX(-50%);
+  position: relative;
   width: max-content;
-
-  @media #{$max-tablet} {
-    bottom: -85px;
-  }
-
-  @media #{$max-mobile} {
-    bottom: -49px;
-  }
 }
 
 .video__button {
