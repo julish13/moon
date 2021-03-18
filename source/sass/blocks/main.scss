@@ -14,12 +14,14 @@
 }
 
 .main__header {
+  margin-bottom: 100px;
   padding: {
     top: 318px;
     bottom: 20px;
   }
 
   @media #{$max-tablet} {
+    margin-bottom: 30px;
     padding: {
       top: 0;
       bottom: 0;
@@ -28,13 +30,13 @@
 }
 
 .main__about {
-  padding-top: 150px;
-  margin-bottom: 284px;
+  padding-top: 50px;
+  margin-bottom: 134px;
 
   @media #{$max-tablet} {
     margin-bottom: 0;
     padding: {
-      top: 70px;
+      top: 40px;
       bottom: 31px;
     }
   }
@@ -46,7 +48,10 @@
 }
 
 .main__types {
-  padding-bottom: 149px;
+  padding: {
+    top: 150px;
+    bottom: 149px;
+  }
 
   @media #{$max-tablet} {
     padding: {
@@ -63,13 +68,14 @@
 }
 
 .main__bikes-video {
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   padding: {
     top: 122px;
     bottom: 20px;
   }
 
   @media #{$max-tablet} {
+    margin-bottom: 109px;
     padding: {
       top: 64px;
       bottom: 20px;
@@ -77,6 +83,7 @@
   }
 
   @media #{$max-mobile} {
+    margin-bottom: 101px;
     padding: {
       top: 78px;
       bottom: 20px;
@@ -85,11 +92,11 @@
 }
 
 .main__address {
-  padding-top: 150px;
+  padding-top: 50px;
 
   @media #{$max-tablet} {
     padding: {
-      top: 49px;
+      top: 40px;
       left: 35px;
       right: 35px;
     }
