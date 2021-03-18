@@ -9,6 +9,12 @@ a {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100vh;
+  font-family: "Open-Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
 }
 
 *,
