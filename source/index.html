@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Магазин велосипедов и велосипедных аксессуаров Moon. Доставка по всей России">
+    <meta
+      name="description"
+      content="Магазин велосипедов и велосипедных аксессуаров Moon. Доставка по всей России"
+    />
     <title>Магазин велосипедов Moon</title>
     <link rel="stylesheet" href="css/style.min.css" />
     <link
@@ -118,7 +121,7 @@
                 id="name"
                 placeholder="Введите Ваше Имя"
               />
-               <label class="visually-hidden" for="tel"></label>
+              <label class="visually-hidden" for="tel"></label>
               <input
                 required
                 type="tel"
@@ -276,21 +279,8 @@
         <p>
           Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
         </p>
-        <div class="address__map map" id="map">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="img/content/map.webp 1x, img/content/map.webp 2x"
-            />
-            <!-- 1х: 957px; 2x: 1914px -->
-            <img
-              width="957"
-              height="530"
-              src="img/content/map.png"
-              srcset="img/content/map@2x.png 2x"
-              alt="ул. Большая Конюшенная, 19"
-            />
-          </picture>
+        <div class="address__map map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1616168930060!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </section>
     </main>
@@ -315,9 +305,5 @@
       </address>
     </footer>
     <script src="js/main.js"></script>
-    <script
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmwjGqbP-jxTZ8QsfhLzsMq8csUyF2tk&callback=initMap"
-    ></script>
   </body>
 </html>
