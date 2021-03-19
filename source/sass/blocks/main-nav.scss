@@ -1,6 +1,6 @@
 .main-nav {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -16,6 +16,10 @@
     min-height: auto;
   }
 }
+
+// .main-nav--opened {
+//   position: fixed;
+// }
 
 .main-nav--opened,
 .main-nav--no-js {
