@@ -27,6 +27,15 @@ const productionOn = (done) => {
   done();
 };
 
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(gulpIf(production, removeHtml()))
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
+};
+
 const css = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -59,7 +68,8 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(css));
-  gulp.watch("source/js/**/*.js", gulp.series(scripts));
+  gulp.watch("source/js/main/**/*.js", gulp.series(scriptsMain));
+  gulp.watch("source/js/vendor/**/*.js", gulp.series(scriptsVendor));
   gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
@@ -99,15 +109,6 @@ const sprite = () => {
     .pipe(gulp.dest("build/img"));
 };
 
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(gulpIf(production, removeHtml()))
-    .pipe(posthtml([
-      include()
-    ]))
-    .pipe(gulp.dest("build"));
-};
-
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
@@ -118,16 +119,18 @@ const copy = () => {
   .pipe(gulp.dest("build"));
 };
 
-gulp.task("clean", function () {
-  return del("build");
-});
-
-
-const scripts = () => {
+const scriptsMain = () => {
   return gulp
-  .src(["./source/js/**/*.js"], { sourcemaps: true })
-  .pipe(concat("main.js"))
-  .pipe(gulp.dest("./build/js"))
+  .src('source/js/main/**/*.js', { sourcemaps: true })
+  .pipe(concat('main.js'))
+  .pipe(gulp.dest('build/js'));
+};
+
+const scriptsVendor = () => {
+  return gulp
+  .src('source/js/vendor/**/*.js', { sourcemaps: true })
+  .pipe(concat('vendor.js'))
+  .pipe(gulp.dest('build/js'));
 };
 
 const devTools = (done) => {
@@ -146,13 +149,14 @@ const clean = () => {
 const build = gulp.series(
   clean,
   gulp.parallel(
-    copy,
-    css,
-    sprite,
     html,
-    scripts,
+    css,
+    images,
     createWebp,
-    images)
+    sprite,
+    scriptsMain,
+    scriptsVendor,
+    copy)
 );
 
 const predeploy = gulp.series(productionOn, build);
