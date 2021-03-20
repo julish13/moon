@@ -62,6 +62,8 @@
   if (formElement) {
     const telInputElement = formElement.querySelector('#tel');
     const mask = new Inputmask('9 (999) 999-99-99');
-    mask.mask(telInputElement);
+    if (telInputElement) {
+      mask.mask(telInputElement);
+    }
   }
 })();
