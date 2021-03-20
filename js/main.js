@@ -2,17 +2,20 @@
 
 (() => {
   const mainNavElement = document.querySelector('.main-nav');
+  const mainElement = document.querySelector('.main');
+  const footerElement = document.querySelector('.page-footer');
 
   if (mainNavElement) {
-    const mainNavLogo = mainNavElement.querySelector('.main-nav__logo');
-    const mainNavToggle = mainNavElement.querySelector('.main-nav__toggle');
-    const mainNavSiteNav = mainNavElement.querySelector('.main-nav__site-nav');
+    const mainNavLogoElement = mainNavElement.querySelector('.main-nav__logo');
+    const mainNavToggleElement = mainNavElement.querySelector('.main-nav__toggle');
+    const mainNavSiteNavElement = mainNavElement.querySelector('.main-nav__site-nav');
+    const navItemsCollection = mainNavElement.querySelectorAll('.site-nav__item');
 
     const elements = {
       'main-nav': mainNavElement,
-      'main-nav__logo': mainNavLogo,
-      'main-nav__toggle': mainNavToggle,
-      'main-nav__site-nav': mainNavSiteNav,
+      'main-nav__logo': mainNavLogoElement,
+      'main-nav__toggle': mainNavToggleElement,
+      'main-nav__site-nav': mainNavSiteNavElement,
     };
 
     Object.keys(elements).forEach((element) => {
@@ -22,15 +25,30 @@
       }
     })
 
-    if (mainNavToggle) {
-      mainNavToggle.addEventListener('click', () => {
-        Object.keys(elements).forEach((element) => {
-          if (elements[element] !== undefined) {
-            elements[element].classList.toggle(`${element}--opened`);
-            elements[element].classList.toggle(`${element}--closed`);
-          }
-        })
-      });
+    const toggleMenu = () => {
+      Object.keys(elements).forEach((element) => {
+        if (elements[element] !== undefined) {
+          elements[element].classList.toggle(`${element}--opened`);
+          elements[element].classList.toggle(`${element}--closed`);
+        }
+      })
+      if (mainElement) {
+        mainElement.classList.toggle('main--menu-open');
+      }
+      if (footerElement) {
+        footerElement.classList.toggle('page-footer--menu-open');
+      }
+    };
+
+    if (mainNavToggleElement) {
+      mainNavToggleElement.addEventListener('click', toggleMenu);
+    }
+
+    if (navItemsCollection.length > 0) {
+      navItemsCollection.forEach((item) => {
+        const link = item.querySelector('a');
+        link.addEventListener('click', toggleMenu);
+      })
     }
   }
 })();
