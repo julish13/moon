@@ -1,8 +1,3 @@
-$map-width-tablet: 698px;
-$map-height-tablet: 545px;
-
-$map-height-mobile: 250px;
-
 .map {
   width: 957px;
   height: 530px;
@@ -10,28 +5,10 @@ $map-height-mobile: 250px;
 
   @media #{$max-tablet} {
     width: 100%;
-    height: $map-height-tablet;
+    height: 545px;
   }
 
   @media #{$max-mobile} {
-    height: $map-height-mobile;
-  }
-}
-
-.map img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media #{$max-tablet} {
-    width: $map-width-tablet;
-    height: $map-height-tablet;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
-
-  @media #{$max-mobile} {
-    width: $mobile-width;
-    height: $map-height-mobile;
+    height: 250px;
   }
 }
