@@ -1,5 +1,7 @@
 .page-footer--menu-open {
-  display: none;
+  @media #{$max-tablet} {
+    display: none;
+  }
 }
 
 .page-footer__contacts {

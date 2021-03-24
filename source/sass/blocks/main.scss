@@ -1,5 +1,7 @@
 .main--menu-open {
-  display: none;
+  @media #{$max-tablet} {
+    display: none;
+  }
 }
 
 .main h2 {
